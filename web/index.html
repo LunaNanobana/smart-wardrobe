@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FashOn – AI Fashion App</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <a href="#" class="nav-logo" data-page="home">
+    <img src="assets/images/logo.png" alt="FashOn Logo" />
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#" data-page="home" class="active">Home</a></li>
+    <li><a href="#" data-page="search">Search</a></li>
+    <li><a href="#" data-page="try-on">Try On</a></li>
+    <li><a href="#" data-page="dress-me">Dress Me</a></li>
+    <li><a href="#" data-page="my-page">My Page</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="btn-outline" onclick="window.showPage('login')">Log In</button>
+    <button class="btn-solid" onclick="window.showPage('login')">Sign Up</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ========== HOME PAGE ========== -->
+  <section id="home" class="page-section active">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-tag">✨ AI-Powered Fashion</div>
+        <h1 class="hero-title">
+          Your Personal<br><span>Fashion</span><br>Stylist
+        </h1>
+        <p class="hero-desc">
+          Discover outfits tailored to your body type, style preferences, and wardrobe.
+          Try clothes on virtually with our AI try-on technology.
+        </p>
+        <div class="hero-buttons">
+          <button class="hero-btn-main" onclick="window.showPage('login')">Get Started</button>
+          <button class="hero-btn-secondary" onclick="window.showPage('try-on')">Try It Free</button>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="phone-glow phone-glow-1"></div>
+        <div class="phone-mockup">
+          <img src="assets/images/home_screen.png" alt="App Screenshot" />
+        </div>
+        <div class="phone-glow phone-glow-2"></div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="number">50K+</div>
+        <div class="label">Outfits Created</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">12K+</div>
+        <div class="label">Happy Users</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">98%</div>
+        <div class="label">Satisfaction Rate</div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="features-section">
+      <h2 class="section-title">Everything You Need</h2>
+      <p class="section-sub">From AI styling to virtual try-ons, FashOn has it all</p>
+
+      <div class="features-grid">
+        <div class="feature-card" onclick="window.showPage('try-on')">
+          <div class="feature-icon">👗</div>
+          <h3>Virtual Try-On</h3>
+          <p>Upload your photo and see exactly how any outfit looks on your body before buying.</p>
+        </div>
+        <div class="feature-card" onclick="window.showPage('dress-me')">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Outfit Generator</h3>
+          <p>Let our AI create perfect outfits for any occasion, season, or style preference.</p>
+        </div>
+        <div class="feature-card" onclick="window.showPage('my-page')">
+          <div class="feature-icon">👚</div>
+          <h3>Digital Closet</h3>
+          <p>Organize your entire wardrobe digitally and get smart outfit suggestions.</p>
+        </div>
+        <div class="feature-card" onclick="window.showPage('search')">
+          <div class="feature-icon">🔍</div>
+          <h3>Visual Search</h3>
+          <p>Snap a photo of any outfit you like and find similar items instantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">♻️</div>
+          <h3>Second-Hand Store</h3>
+          <p>Sell your pre-loved clothes and shop sustainably with our circular fashion marketplace.</p>
+        </div>
+        <div class="feature-card" onclick="window.showPage('my-page')">
+          <div class="feature-icon">📏</div>
+          <h3>Size Recommendations</h3>
+          <p>Get precise size suggestions based on your body measurements and brand fit data.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second-Hand Banner -->
+    <div class="second-hand-banner">
+      <div class="sh-check">✅</div>
+      <div class="sh-content">
+        <h3>Second-Hand</h3>
+        <div class="sh-subtitle">Prevent Overconsumption</div>
+        <p class="sh-desc">Take your extra clothes to our second-hand store and give them a new life.</p>
+      </div>
+      <div style="margin-left:auto">
+        <button class="btn-solid" style="padding:14px 32px;font-size:14px;">Join Now</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========== LOGIN PAGE ========== -->
+  <section id="login" class="page-section">
+    <div class="login-section">
+
+      <div class="login-visual">
+        <img src="assets/images/logo.png" alt="FashOn Logo" class="login-logo-big" />
+      </div>
+
+      <div class="login-form-side">
+        <div class="login-form-container">
+          <h2 class="login-title">Welcome Back</h2>
+          <p class="login-sub">Sign in to your FashOn account</p>
+
+          <div class="tab-switcher">
+            <button class="tab-btn active">Log In</button>
+            <button class="tab-btn">Sign Up</button>
+          </div>
+
+          <div class="input-group">
+            <span class="input-icon">👤</span>
+            <input type="text" class="form-input" placeholder="Username or Email" />
+          </div>
+
+          <div class="input-group">
+            <span class="input-icon">🔒</span>
+            <input type="password" class="form-input" placeholder="Password" />
+          </div>
+
+          <button class="login-main-btn" onclick="window.showPage('home')">LOG IN</button>
+
+          <div class="or-divider">- OR Continue with -</div>
+
+          <div class="social-row">
+            <button class="social-btn google">G</button>
+            <button class="social-btn apple">&#63743;</button>
+            <button class="social-btn facebook">f</button>
+          </div>
+
+          <div class="sign-up-link">
+            Create An Account <a href="#" onclick="document.querySelectorAll('.tab-btn').forEach((t,i)=>{t.classList.toggle('active',i===1)})">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEARCH PAGE ========== -->
+  <section id="search" class="page-section">
+    <div class="search-section">
+      <h2 class="section-title">Find Your Style</h2>
+      <p class="section-sub">Search by text or upload a photo to find similar items</p>
+
+      <div class="search-bar-big">
+        <span class="search-icon">🔍</span>
+        <input type="text" class="search-input-web" placeholder="Search anything... (e.g. women's t-shirts)" />
+        <button class="search-btn">Search</button>
+      </div>
+
+      <!-- Camera Upload Box -->
+      <div style="
+        border: 2px dashed var(--primary-pink);
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        background: white;
+        margin-bottom: 32px;
+        cursor: pointer;
+        transition: background 0.2s;
+      " onmouseover="this.style.background='var(--chip-unselected)'"
+         onmouseout="this.style.background='white'">
+        <div style="font-size:48px;margin-bottom:12px;">📸</div>
+        <div style="font-family:'Playfair Display';font-size:18px;font-weight:700;color:var(--text-dark);margin-bottom:8px;">
+          Upload a Photo
+        </div>
+        <p style="font-size:13px;color:var(--text-medium);">
+          Drag & drop or click to upload an image of an outfit you like
+        </p>
+      </div>
+
+      <!-- Found Label -->
+      <div style="
+        display:inline-block;
+        background:white;
+        border:1.5px solid var(--divider);
+        border-radius:30px;
+        padding:10px 20px;
+        font-weight:600;
+        font-size:14px;
+        color:var(--text-dark);
+        margin-bottom:20px;
+        box-shadow: 0 2px 10px rgba(212,89,122,0.08);
+      ">
+        Found: women's t-shirts
+      </div>
+
+      <div class="products-grid">
+        <!-- Filled by JS -->
+      </div>
+
+      <div class="try-on-overlay-btn">
+        <button class="hero-btn-main" onclick="window.showPage('try-on')">
+          📸 Photo Try On
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRY-ON PAGE ========== -->
+  <section id="try-on" class="page-section">
+    <div class="try-on-section">
+      <h2 class="section-title">Virtual Try-On</h2>
+      <p class="section-sub">See how any outfit looks on you before you buy</p>
+
+      <div class="try-on-layout">
+
+        <div class="try-on-left">
+          <div class="before-after">
+            <div class="before-after-item">
+              <span class="ba-label">Before</span>
+              <img src="assets/images/try_on_result.png" alt="Before" style="object-position:left center;" />
+            </div>
+            <div class="before-after-item">
+              <span class="ba-label">After</span>
+              <img src="assets/images/try_on_result.png" alt="After" />
+            </div>
+          </div>
+
+          <!-- Progress Demo -->
+          <div class="progress-demo" style="margin-top:20px;">
+            <div class="progress-header">
+              <span class="progress-title">Creating your look......</span>
+              <span class="progress-pct">55%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:55%;"></div>
+            </div>
+          </div>
+
+          <!-- Loading preview -->
+          <div style="
+            margin-top:20px;
+            border-radius:24px;
+            overflow:hidden;
+            box-shadow: 0 6px 24px rgba(212,89,122,0.15);
+            max-height:300px;
+          ">
+            <img src="assets/images/try_on_loading.png" alt="Try On Preview"
+              style="width:100%;height:300px;object-fit:cover;display:block;" />
+          </div>
+        </div>
+
+        <div class="try-on-right">
+          <h3 style="font-family:'Playfair Display';font-size:28px;font-weight:900;margin-bottom:24px;color:var(--text-dark);">
+            How It Works
+          </h3>
+
+          <div class="try-on-steps">
+            <div class="try-on-step">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>Upload Your Photo</h4>
+                <p>Take a full-body photo or choose one from your gallery</p>
+              </div>
+            </div>
+            <div class="try-on-step">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>Select an Outfit</h4>
+                <p>Browse our catalog or search for a specific item you love</p>
+              </div>
+            </div>
+            <div class="try-on-step">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>AI Magic</h4>
+                <p>Our AI virtually dresses you in seconds with realistic results</p>
+              </div>
+            </div>
+            <div class="try-on-step">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <h4>Save or Buy</h4>
+                <p>Love the look? Save it to your closet or buy it directly</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upload Area -->
+          <div style="
+            border: 2px dashed var(--primary-pink);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            background: var(--bg-light);
+            cursor: pointer;
+            margin-bottom: 20px;
+          ">
+            <div style="font-size:40px;margin-bottom:10px;">🤳</div>
+            <div style="font-weight:600;font-size:15px;color:var(--text-dark);margin-bottom:6px;">
+              Upload Your Photo
+            </div>
+            <p style="font-size:12px;color:var(--text-medium);">
+              JPG, PNG – max 10MB
+            </p>
+          </div>
+
+          <button class="start-try-on-btn generate-btn">
+            START TRY-ON ✨
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DRESS ME PAGE ========== -->
+  <section id="dress-me" class="page-section">
+    <div class="dress-me-section">
+      <h2 class="section-title" style="font-size:52px;letter-spacing:4px;">DRESS ME</h2>
+      <p class="section-sub">Let AI create your perfect outfit</p>
+
+      <div class="dress-me-layout">
+
+        <div class="outfit-creator">
+
+          <div class="outfit-create-btns">
+            <button class="create-btn">
+              ✏️ Create Outfit<br>Yourself
+            </button>
+            <button class="create-btn">
+              🤖 Create Outfit<br>By AI
+            </button>
+          </div>
+
+          <div class="category-group">
+            <h4>Seasonal</h4>
+            <div class="chips-row">
+              <button class="chip active">Summer</button>
+              <button class="chip">Spring</button>
+              <button class="chip">Winter</button>
+              <button class="chip">Autumn</button>
+            </div>
+          </div>
+
+          <div class="category-group">
+            <h4>Occasion</h4>
+            <div class="chips-row">
+              <button class="chip active">School</button>
+              <button class="chip">Party</button>
+              <button class="chip">Vacation</button>
+              <button class="chip">Work</button>
+            </div>
+          </div>
+
+          <div class="category-group">
+            <h4>General</h4>
+            <div class="chips-row">
+              <button class="chip active">Casual</button>
+              <button class="chip">Formal</button>
+              <button class="chip">Smart-Casual</button>
+              <button class="chip">Sporty</button>
+            </div>
+          </div>
+
+          <div class="style-keywords">
+            <h4>Style Key Words</h4>
+            <input type="text" class="keyword-input" value="Casual" placeholder="e.g. Minimalist, Boho..." />
+          </div>
+
+          <button class="generate-btn">GENERATE OUTFIT ✨</button>
+        </div>
+
+        <div class="outfit-preview">
+          <img src="assets/images/dress_me.png" alt="Dress Me Preview" />
+          <div style="padding:24px;">
+            <h3 style="font-family:'Playfair Display';font-size:20px;font-weight:700;margin-bottom:8px;">
+              Generated Outfit
+            </h3>
+            <p style="font-size:13px;color:var(--text-medium);margin-bottom:16px;">
+              AI-curated look based on your preferences: Casual, Summer, School
+            </p>
+            <div style="display:flex;gap:12px;">
+              <button class="btn-solid" style="flex:1;padding:12px;">Save Outfit</button>
+              <button class="btn-outline" style="flex:1;padding:12px;">Try On</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MY PAGE ========== -->
+  <section id="my-page" class="page-section">
+    <div class="profile-section">
+      <h2 class="section-title">My Page</h2>
+      <p class="section-sub">Your personal fashion profile</p>
+
+      <div class="profile-layout">
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+          <div class="profile-card-header">
+            <div class="avatar-ring">
+              <img src="assets/images/user_profile.png" alt="Alina" />
+            </div>
+            <div class="profile-name">Elina Adibekova</div>
+            <div class="profile-handle">@elinas85</div>
+            <div class="profile-meta">
+              <span>📅 30.10.2002</span>
+              <span>📍 Astana, KZ</span>
+            </div>
+          </div>
+
+          <div class="profile-card-body">
+            <div style="
+              display:inline-block;
+              background:var(--light-pink);
+              color:var(--deep-pink);
+              font-size:11px;
+              font-weight:600;
+              padding:5px 14px;
+              border-radius:20px;
+              margin-bottom:16px;
+            ">
+              Body Type: Square
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-pill">
+                <div class="stat-val">50 kg</div>
+                <div class="stat-lbl">Weight</div>
+              </div>
+              <div class="stat-pill">
+                <div class="stat-val">174 cm</div>
+                <div class="stat-lbl">Height</div>
+              </div>
+            </div>
+
+            <div class="skin-tone-row">
+              <span style="font-size:13px;color:var(--text-medium);">Skin Tone</span>
+              <div class="skin-circle"></div>
+            </div>
+
+            <div class="closet-count">
+              <strong>38</strong> items in the closet
+            </div>
+
+            <button class="ask-size-btn">Ask for size recommendations</button>
+
+            <div style="margin-top:16px;display:flex;gap:10px;">
+              <button class="btn-outline" style="flex:1;font-size:12px;padding:10px;">My Outfits ↗</button>
+              <button style="
+                flex:0;
+                width:44px;height:44px;
+                border-radius:50%;
+                border:1.5px solid var(--divider);
+                background:white;
+                cursor:pointer;
+                font-size:18px;
+              ">🤍</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Closet Panel -->
+        <div class="closet-panel">
+          <div class="closet-tabs">
+            <button class="closet-tab active">All clothes</button>
+            <button class="closet-tab">Favorites</button>
+            <button class="closet-tab">Outfits</button>
+          </div>
+
+          <!-- Categories -->
+          <div class="clothes-category">
+            <div class="clothes-category-title">
+              <span>Dresses ✏</span>
+            </div>
+            <div class="clothes-row">
+              <div class="cloth-item"><img src="assets/images/search_result_shirt.png" alt="dress" /></div>
+              <div class="cloth-item"><img src="assets/images/my_page.png" alt="dress" /></div>
+              <div class="cloth-item"><img src="assets/images/try_on_result.png" alt="dress" /></div>
+              <div class="cloth-item"><img src="assets/images/search_result_shirt.png" alt="dress" /></div>
+            </div>
+          </div>
+
+          <div class="clothes-category">
+            <div class="clothes-category-title">
+              <span>Bottoms & Skirts ✏</span>
+            </div>
+            <div class="clothes-row">
+              <div class="cloth-item"><img src="assets/images/my_page.png" alt="bottom" /></div>
+              <div class="cloth-item"><img src="assets/images/search_result_shirt.png" alt="bottom" /></div>
+              <div class="cloth-item"><img src="assets/images/try_on_result.png" alt="bottom" /></div>
+              <div class="cloth-item"><img src="assets/images/my_page.png" alt="bottom" /></div>
+            </div>
+          </div>
+
+          <div class="clothes-category">
+            <div class="clothes-category-title">
+              <span>Jackets ✏</span>
+            </div>
+            <div class="clothes-row">
+              <div class="cloth-item"><img src="assets/images/try_on_result.png" alt="jacket" /></div>
+              <div class="cloth-item"><img src="assets/images/my_page.png" alt="jacket" /></div>
+              <div class="cloth-item"><img src="assets/images/search_result_shirt.png" alt="jacket" /></div>
+            </div>
+          </div>
+
+          <div class="clothes-category">
+            <div class="clothes-category-title">
+              <span>Inner Clothes ✏</span>
+            </div>
+            <div class="clothes-row">
+              <div class="cloth-item"><img src="assets/images/search_result_shirt.png" alt="inner" /></div>
+              <div class="cloth-item"><img src="assets/images/try_on_result.png" alt="inner" /></div>
+              <div class="cloth-item"><img src="assets/images/my_page.png" alt="inner" /></div>
+              <div class="cloth-item"><img src="assets/images/search_result_shirt.png" alt="inner" /></div>
+            </div>
+          </div>
+
+          <!-- Activity -->
+          <div style="
+            background:white;
+            border-radius:20px;
+            padding:20px;
+            box-shadow: 0 3px 12px rgba(212,89,122,0.06);
+            margin-top:16px;
+          ">
+            <div style="font-weight:700;font-size:15px;margin-bottom:16px;font-family:'Playfair Display';">
+              Recent Activity
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+              <div>
+                <div style="font-weight:600;font-size:13px;">25 June 2025</div>
+                <div style="font-size:11px;color:var(--text-light);">25% / 18%</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="font-size:22px;">☀️</span>
+                <span style="font-size:13px;color:var(--text-medium);">Sunny · 6:00 AM</span>
+              </div>
+            </div>
+            <button class="btn-solid" style="width:100%;padding:12px;font-size:13px;">
+              📸 Upload Your Outfit
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="FashOn" />
+      <p>Your AI-powered personal fashion stylist. Discover, try on, and style outfits made just for you.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Features</h4>
+      <ul>
+        <li><a href="#" data-page="try-on">Virtual Try-On</a></li>
+        <li><a href="#" data-page="dress-me">AI Outfit Gen</a></li>
+        <li><a href="#" data-page="my-page">Digital Closet</a></li>
+        <li><a href="#" data-page="search">Visual Search</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 FashOn. All rights reserved.</p>
+    <p>Made with 💗 for fashion lovers</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
